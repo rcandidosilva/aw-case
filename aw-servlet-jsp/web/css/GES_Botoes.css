@@ -1,0 +1,7 @@
+.bt_carrinho{
+	background-image:  url("/aw/images/bottom/Bt_carrinho.gif");
+	background-repeat: no-repeat;}
+.bt_carrinho a{
+	background-image:  url("/aw/images/bottom/Bt_carrinho.gif");background-repeat: no-repeat;}
+.bt_carrinho a:hover{
+	background-image:   url("/aw/images/bottom/Bt_carrinho_on.gif");background-repeat: no-repeat;}

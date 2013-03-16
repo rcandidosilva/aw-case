@@ -1,0 +1,100 @@
+fieldset {  
+  border: 0pt; 
+}
+
+table.tabelaGC fieldset legend{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #656297;
+  text-align: left;  
+  padding: 0px;
+  margin: 0px;
+}
+
+table.tabelaGC td{
+  /*Essencial para nao ficar um espaço entre a célula e a borda*/
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;    
+  border: 0pt solid red;
+}
+table.tabelaGC{  
+  border:1pt solid #EEEEEE;
+  width:100%;
+  /*Essencial para nao ficar um espaço entre a célula e a borda
+  Se for igual a separate pode-se definir border-spacing*/
+  border-collapse: collapse;  
+  
+}
+
+table.tabelaGC thead {  
+  /* Essencial para nao ficar espaços entre as células no IE*/
+  border-collapse: collapse; 
+  width: 100%;      
+  background-color: #EEEEEE;	
+  /* Configuraçao do texto */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;  
+  color: white;	
+  text-align: left;
+  text-indent: 6pt;  
+}
+
+table.tabelaGC thead td.coluna1{  
+  /* Fundo da célula */
+  background-color: #858495;
+  width: 250px;
+  background-image: url("../images/titulos/Tt_tabelas_transicao.gif");  
+  background-repeat: no-repeat;
+  background-position: right;
+  text-indent: 10px;
+}
+
+
+table.tabelaGC, table.tabelaGC tbody td label, table.tabelaGC input, table.tabelaGC select{
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #858495;
+  font-weight: bold;
+  vertical-align: top;
+  margin-left: 15px;
+}
+
+table.tabelaGC a{
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #656297;
+  font-weight: bold;
+  vertical-align: top;
+  margin-left: 15px;
+  cursor: pointer;  
+  text-decoration: none;
+}
+
+table.tabelaGC div{
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #858495;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+  margin-left: 15px;
+}
+
+.tabela_subtitulo{
+	color:#656297;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	font-size: 14px;
+}
+
+.texto_rodape_tabelas{font-family: Arial, Helvetica, sans-serif;font-size: 11px;
+                      font-weight: bold;color: #858495;	background-color: #EEEEEE;}
+
+
+.

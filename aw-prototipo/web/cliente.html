@@ -1,0 +1,367 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+    <head>
+        <title>GES - GlobalEducation System</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link href="css/ges.css" rel="stylesheet" type="text/css">
+        <link href="css/GES_Botoes.css" rel="stylesheet" type="text/css">
+        <link href="css/GES_Tabelas.css" rel="stylesheet" type="text/css">
+        <script src="js/swapImage.js" language="javascript" type="text/javascript"></script>
+        <script src="js/funcoes.js" language="javascript" type="text/javascript"></script>
+        <script src="js/funcoesValidaCliente.js" language="javascript" type="text/javascript"></script>
+        <script src="js/validaFormCliente.js" language="javascript" type="text/javascript"></script>
+    </head>
+
+    <body onLoad="MM_preloadImages('images/bottom/Bt_continuarComprando_on.gif','images/bottom/bt_excluir_on.gif','images/bottom/Bt_finalizarPedido_on.gif')">
+        <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="512"><img src="images/barras/titulo3/barra_top_r1_c1.gif" width="512" height="128"></td>
+                            <td class="barra_top_centro">&nbsp;</td>
+                            <td width="500" class="barra_top_direita">
+                                <table width="250"  border="0" align="right" cellpadding="4" cellspacing="4">
+                                    <tr>
+                                        <td align="right">
+                                            <input name="busca" type="text" size="20" maxlength="50">
+                                        </td>
+                                        <td align="left">
+                                            <button type="submit">Buscar</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td valign="top"><table width="100%"  border="0" cellspacing="5" cellpadding="5">
+                            <tr>
+
+                                <td width="170" align="left" valign="top">
+                                    <table width="170" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td class="menu_titulo"><div align="right">
+                                                Categoria
+                                            </div></td>
+                                            <td class="menu_titulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Visualizar todas</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Cadastrar nova</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="menu_titulo"><div align="right">
+                                                Produtos
+                                            </div></td>
+                                            <td class="menu_titulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Pesquisar & Editar</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"> <div align="right">
+                                                <a href="#">Cadastrar novo</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="menu_titulo"><div align="right">
+                                                Clientes
+                                            </div></td>
+                                            <td class="menu_titulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Pesquisar & Editar</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="menu_subtitulo"> <div align="right">
+                                                <a href="#">Cadastrar novo</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_titulo"><div align="right">
+                                                Pedidos
+                                            </div></td>
+                                            <td class="menu_titulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Cat&aacute;logo de Produtos</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Listar Pedidos</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Ver meus Pedidos</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Pesquisar</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="menu_titulo"><div align="right">
+                                                Relatórios
+                                            </div></td>
+                                            <td class="menu_titulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Produtos</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Vendas Por Marca</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="menu_titulo"><div align="right">
+                                                Gráficos
+                                            </div></td>
+                                            <td class="menu_titulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="menu_subtitulo"><div align="right">
+                                                <a href="#">Vendas Por Marca</a>
+                                            </div></td>
+                                            <td class="menu_subtitulo">
+                                                <img src="images/menus/fundo_bt_titulo2.gif" width="60" height="20">
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+
+                                <td height="386" valign="top">
+
+
+                                    <form method="post" action="${contexto}/controller?command=admin.cliente.Salvar"
+                                        onsubmit="return validaForm(this);">
+
+                                        <table class="tabelaGC">
+
+                                            <thead>
+                                                <tr><td colspan="2">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="coluna1">Cadastro de Clientes</td>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </td></tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <fieldset>
+                                                            <legend>Dados do Cliente</legend>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <label for="nome">Nome:</label>
+                                                                        </td>
+                                                                        <td colspan="3" align="left">
+                                                                            <input type="hidden" name="idCliente" value="">
+                                                                            <input name="nome" id="nome" type="text" size="75"
+                                                                            maxlength="255" value="">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <label for="email">e-mail:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="email" id="email" type="text" size="50"
+                                                                            maxlength="50" value="">
+                                                                        </td>
+                                                                        <td align="right">
+                                                                            <label for="telefone">Telefone:</label>
+                                                                        </td>
+                                                                        <td align="right">
+                                                                            <input name="telefone" id="telefone" type="text" size="20"
+                                                                            maxlength="50" value="">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </fieldset>
+                                                        <fieldset>
+                                                            <legend>Endereço</legend>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <label for="enderecoRua">Rua/Av:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="enderecoRua" id="enderecoRua" type="text"
+                                                                            size="40" maxlength="50" value="">
+                                                                        </td>
+                                                                        <td align="right">
+                                                                            <label for="enderecoNumero">Número:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="enderecoNumero" id="enderecoNumero" type="text"
+                                                                            size="10" maxlength="10" value="">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <label for="enderecoBairro">Bairro:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="enderecoBairro" id="enderecoBairro" type="text"
+                                                                            size="40" maxlength="50" value="">
+                                                                        </td>
+                                                                        <td align="right">
+                                                                            <label for="enderecoCep">CEP:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="enderecoCep" id="enderecoCep" type="text"
+                                                                            size="10" maxlength="10" value="">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td width="60" align="right">
+                                                                            <label for="enderecoCidade">Cidade:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="enderecoCidade" id="enderecoCidade" type="text"
+                                                                            size="40" maxlength="50" value="">
+                                                                        </td>
+                                                                        <td align="right">
+                                                                            <label for="enderecoEstado">Estado:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="enderecoEstado" id="enderecoEstado" type="text"
+                                                                            size="2" maxlength="2" value="">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <label for="status">Status:</label>
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <input name="status" id="status" type="checkbox" value="Ativo">
+                                                                            Ativo
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <a href="#">
+                                                                                Clique aqui para ver os Pedidos
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="4" align="center">
+                                                                            <button name="salvar" type="submit" id="salvar">Salvar</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </fieldset>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="512"><img src="images/barras/titulo3/barra_bottom_r1_c1.gif"></td>
+                        <td class="rodape_centro">&nbsp;</td>
+                        <td width="500" class="rodape_direito">&nbsp;</td>
+                      </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+
+</html>

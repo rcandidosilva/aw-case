@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="template.xhtml">
+
+        <ui:define name="content">
+            <h:form>
+                <h:panelGrid columns="1" styleClass="tabelaJSF">
+                    <f:facet name="header">
+                        <h:graphicImage url="images/titulos/listaCategorias.gif" height="30"
+                                        width="400"/>
+                    </f:facet>
+                    <h:dataTable value="#{CategoriaMB.categorias}" var="cat" id="tabela"
+                                styleClass="tabelaJSF" headerClass="tabela_subtitulo">
+                        <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Descri&ccedil;&atilde;o" escape="false"/>
+                        </f:facet>
+                        <h:commandLink action="#{CategoriaMB.viewDetail}">
+                            <h:outputText value="#{cat.descricao}"/>
+                        </h:commandLink>
+                        </h:column>
+                        <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Ativo"/>
+                        </f:facet>
+                        <h:selectBooleanCheckbox disabled="true" value="#{cat.ativo}"/>
+                        </h:column>
+                        <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id"/>
+                        </f:facet>
+                        <h:outputText value="#{cat.id}"/>
+                        </h:column>
+                        <h:column>
+                        <h:commandLink action="#{CategoriaMB.delete}" value="Apagar"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGrid>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+    
+</html>

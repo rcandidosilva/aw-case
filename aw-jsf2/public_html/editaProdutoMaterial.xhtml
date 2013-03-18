@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="template.xhtml">
+
+        <ui:define name="content">
+            <h:form>
+                <h:panelGrid columns="2">
+                <h:outputLabel value="Nome" for="nome"/>
+                <h:inputText id="nome" value="#{ProdutoMB.produto.nome}" size="40"/>
+                <h:outputLabel value="Marca" for="marca"/>
+                <h:inputText id="marca" value="#{ProdutoMB.produto.marca}"/>
+                <h:outputLabel value="ID" for="id"/>
+                <h:inputText id="id" value="#{ProdutoMB.produto.id}" size="4" disabled="true"/>
+                <h:outputLabel value="Categoria" for="categoria"/>
+                <h:selectOneMenu id="categoria" value="#{ProdutoMB.produto.categoria}">
+                    <f:selectItems value="#{ProdutoMB.categorias}"/>
+                </h:selectOneMenu>
+                <h:outputLabel value="Preo" for="preco"/>
+                <h:inputText id="preco" value="#{ProdutoMB.produto.preco}" size="8"/>
+                <h:outputLabel value="Taxa de Entrega" for="taxa"/>
+                <h:inputText id="taxa" value="#{ProdutoMB.produto.taxaEntrega}"/>
+                <h:outputLabel value="Ativo?" for="ativo"/>
+                <h:selectBooleanCheckbox id="ativo" value="#{ProdutoMB.produto.ativo}"/>
+                <h:commandButton action="#{ProdutoMB.save}" value="Salvar"/>
+                </h:panelGrid>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+    
+</html>

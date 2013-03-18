@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="MacRoman"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+      <h:form id="formLogin">
+            <h:panelGrid width="200" styleClass="tabelaJSF" >
+                    <f:facet name="header">
+                            <h:graphicImage url="images/titulos/login.gif"
+                                            height="30" width="400"/>
+                    </f:facet>
+                    <h:outputLabel value="e-mail" for="username"/>
+                    <h:inputText id="username" size="40" maxlength="40"
+                                    value="#{AutenticacaoMB.usuario}"/>
+                    <h:outputLabel style="align:right" value="senha"
+                                    for="password"/>
+                    <h:inputSecret id="password" size="40" maxlength="40"
+                                    value="#{AutenticacaoMB.senha}"/>
+                    <h:commandButton value="Login"
+                                        action="#{AutenticacaoMB.validarUsuario}"/>
+                    <h:outputText value=""/>
+                    <h:commandLink action="#{AutenticacaoMB.cadastrarNovoUsuario}">
+                            <h:outputText value="Cadastrar novo usu�rio"/>
+                    </h:commandLink>
+            </h:panelGrid>
+            <h:messages/>
+        </h:form>
+    
+</html>

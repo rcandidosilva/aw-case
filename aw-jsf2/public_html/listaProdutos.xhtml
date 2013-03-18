@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="template.xhtml">
+
+        <ui:define name="content">
+            <h:form>
+                <h:panelGrid columns="1" styleClass="tabelaJSF">
+                <f:facet name="header">
+                    <h:graphicImage url="images/titulos/listarProdutos.gif" height="30"
+                                    width="400"/>
+                </f:facet>
+                <h:dataTable id="tabela" value="#{ProdutoMB.produtos}" var="produto" styleClass="tabelaJSF" headerClass="tabela_subtitulo">    
+                    <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome"/>
+                    </f:facet>
+                    <h:commandLink action="#{ProdutoMB.viewDetail}">
+                    <h:outputText value="#{produto.nome}"/>
+                    </h:commandLink>
+                    </h:column>
+                    <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Ativo"/>
+                    </f:facet>
+                    <h:selectBooleanCheckbox value="#{produto.ativo}" disabled="true"/>
+                    </h:column>
+                    <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Categoria"/>
+                    </f:facet>
+                    <h:outputText value="#{produto.categoria}"/>
+                    </h:column>
+                    <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Pre&ccedil;o" escape="false"/>
+                    </f:facet>
+                    <h:outputText value="#{produto.preco}"/>
+                    </h:column>
+                    <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Marca"/>
+                    </f:facet>
+                    <h:outputText value="#{produto.marca}"/>
+                    </h:column>
+                    <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Id"/>
+                    </f:facet>
+                    <h:outputText value="#{produto.id}"/>
+                    </h:column>
+                </h:dataTable>
+                </h:panelGrid>
+            </h:form>            
+        </ui:define>
+
+    </ui:composition>
+    
+</html>

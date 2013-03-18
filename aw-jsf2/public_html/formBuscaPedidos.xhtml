@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="template.xhtml">
+
+        <ui:define name="content">
+            <h:form>
+                <h:panelGrid styleClass="tabelaGC" headerClass="cabecalho">
+                    <f:facet name="header">                
+                        <h:outputText value="Ver pedidos"/>
+                    </f:facet>
+                    <h:panelGrid columns="3">
+                        <h:outputLabel value="Data Inicial:" for="dataInicio"/>
+                        <h:panelGroup>
+                            <h:inputText id="dataInicio" size="10" 
+                                        styleClass="GC_Normal"
+                                        value="#{PedidoMB.dataInicio}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                            </h:inputText>
+                            <h:outputText value="  dd/mm/yyyy   "/>
+                        </h:panelGroup>
+                        <h:message for="dataInicio"/>
+                        <h:outputLabel value="Data Final:" for="dataFinal"/>
+                        <h:panelGroup>
+                            <h:inputText id="dataFinal" size="10"
+                                        styleClass="GC_Normal"
+                                        value="#{PedidoMB.dataFinal}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                            </h:inputText>
+                            <h:outputText value="  dd/mm/yyyy   "/>
+                        </h:panelGroup>
+                        <h:message for="dataFinal"/>
+                        <h:commandButton value="Buscar"
+                                        action="#{PedidoMB.buscarPedidos}"/>
+                    </h:panelGrid>
+                </h:panelGrid>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+    
+</html>

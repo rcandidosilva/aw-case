@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="buscaRelatorioVendas.jsp" x="900" y="450" zoom="true"/>
+        <Node id="listaClientes.jsp" x="1150" y="300" zoom="true"/>
+        <Node id="menu.jsp" x="650" y="150" zoom="true"/>
+        <Node id="buscaGraficoVendas2.jsp" x="650" y="450" zoom="true"/>
+        <Node id="formFinalizarPedido.jsp" x="400" y="150" zoom="true"/>
+        <Node id="index.jsp" x="650" y="600" zoom="true"/>
+        <Node id="editaCategoria.jsp" x="150" y="900" zoom="true"/>
+        <Node id="editaProduto.jsp" x="900" y="600" zoom="true"/>
+        <Node id="formCatalogoProdutos.jsp" x="400" y="450" zoom="true"/>
+        <Node id="listaCategorias.jsp" x="150" y="600" zoom="true"/>
+        <Node id="pedidoEnviado.jsp" x="400" y="300" zoom="true"/>
+        <Node id="top.jsp" x="650" y="750" zoom="true"/>
+        <Node id="editaCliente.jsp" x="150" y="300" zoom="true"/>
+        <Node id="buscaGraficoVendas.jsp" x="150" y="450" zoom="true"/>
+        <Node id="index2.jsp" x="1150" y="150" zoom="true"/>
+        <Node id="formBuscaPedidos.jsp" x="900" y="150" zoom="true"/>
+        <Node id="dadosPedido.jsp" x="900" y="300" zoom="true"/>
+        <Node id="erros/generico.jsp" x="650" y="300" zoom="true"/>
+        <Node id="formDados.jsp" x="400" y="600" zoom="true"/>
+        <Node id="formPedidos.jsp" x="1400" y="150" zoom="true"/>
+        <Node id="erros/error404.jsp" x="1650" y="150" zoom="true"/>
+        <Node id="bottom.jsp" x="1150" y="450" zoom="true"/>
+        <Node id="formCarrinhoCompras.jsp" x="150" y="150" zoom="true"/>
+        <Node id="listaProdutos.jsp" x="1400" y="300" zoom="true"/>
+        <Node id="login.jsp" x="400" y="750" zoom="true"/>
+        <Node id="editaProdutoMaterial.jsp" x="150" y="750" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

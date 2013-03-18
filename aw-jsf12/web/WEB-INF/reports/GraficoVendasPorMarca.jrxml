@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="GraficoVendasPorMarca"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="ISO-8859-1" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="dataInicio" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="dataFinal" isForPrompting="false" class="java.lang.String"/>
+
+	<field name="marca" class="java.lang.String"/>
+	<field name="quantidade" class="java.lang.Integer"/>
+	<field name="valor" class="java.lang.Double"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="759"  isSplitAllowed="true" >
+				<pie3DChart>
+					<chart isShowLegend="false"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="535"
+						height="376"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="element-8"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						<chartTitle color="#000000" >
+								<titleExpression><![CDATA[" Vendas por Marca " +
+" de " + $P{dataInicio} +
+" até " + $P{dataFinal}]]></titleExpression>
+					</chartTitle>
+						<chartSubtitle color="#000000" >
+								<subtitleExpression><![CDATA["(em quantidade)"]]></subtitleExpression>
+					</chartSubtitle>
+					</chart>
+					<pieDataset>
+						<dataset >
+						</dataset>
+						<keyExpression><![CDATA[$F{marca}]]></keyExpression>
+						<valueExpression><![CDATA[$F{quantidade}]]></valueExpression>
+					</pieDataset>
+					<pie3DPlot >
+						<plot backgroundAlpha="0.5" foregroundAlpha="0.5" />
+					</pie3DPlot>
+				</pie3DChart>
+				<pie3DChart>
+					<chart isShowLegend="false"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="381"
+						width="535"
+						height="376"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="element-9"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						<chartTitle color="#000000" >
+								<titleExpression><![CDATA[" Vendas por Marca " +
+" de " + $P{dataInicio} +
+" até " + $P{dataFinal}]]></titleExpression>
+					</chartTitle>
+						<chartSubtitle color="#000000" >
+								<subtitleExpression><![CDATA["(em valor)"]]></subtitleExpression>
+					</chartSubtitle>
+					</chart>
+					<pieDataset>
+						<dataset >
+						</dataset>
+						<keyExpression><![CDATA[$F{marca}]]></keyExpression>
+						<valueExpression><![CDATA[$F{valor}]]></valueExpression>
+					</pieDataset>
+					<pie3DPlot >
+						<plot backgroundAlpha="0.5" foregroundAlpha="0.5" />
+					</pie3DPlot>
+				</pie3DChart>
+			</band>
+		</summary>
+</jasperReport>

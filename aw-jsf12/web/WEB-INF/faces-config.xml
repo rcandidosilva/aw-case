@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="1.2" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+
+    <managed-bean>
+        <managed-bean-name>AutenticacaoMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.AutenticacaoMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>CategoriaMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.admin.ListaCategoriasMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>ProdutoMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.admin.ListaProdutosMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>ClienteMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.admin.ListaClientesMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>CatalogoMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.online.CatalogoProdutosMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>PedidoMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.online.PedidosMB</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <!--
+    O escopo tem que ser request, pois este ManagedBean contem os parametros da busca, 
+    ou seja, se o escopo for session ele ira lembrar dos parametros sempre
+    -->
+    <managed-bean>
+        <managed-bean-name>GraficoVendasPorMarcaMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.backoffice.GraficoVendasPorMarcaMB</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>RelatorioVendasPorMarcaMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.backoffice.RelatorioVendasPorMarcaMB</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>RelatorioProdutosMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.backoffice.RelatorioProdutosMB</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>CalendarioMB</managed-bean-name>
+        <managed-bean-class>br.com.globalcode.backing_bean.CalendarioMB</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>editaCategoria</from-outcome>
+            <to-view-id>/index.jsp?page=editaCategoria</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editaProduto</from-outcome>
+            <to-view-id>/index.jsp?page=editaProduto</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listaCategorias</from-outcome>
+            <to-view-id>/index.jsp?page=listaCategorias</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listaClientes</from-outcome>
+            <to-view-id>/index.jsp?page=listaClientes</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editaCliente</from-outcome>
+            <to-view-id>/index.jsp?page=editaCliente</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>carrinhoCompras</from-outcome>
+            <to-view-id>/index.jsp?page=formCarrinhoCompras</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>catalogoProdutos</from-outcome>
+            <to-view-id>/index.jsp?page=formCatalogoProdutos</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>finalizarPedido</from-outcome>
+            <to-view-id>/index.jsp?page=formFinalizarPedido</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>buscarPedidos</from-outcome>
+            <to-view-id>/index.jsp?page=formBuscaPedidos</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>pedidos</from-outcome>
+            <to-view-id>/index.jsp?page=formPedidos</to-view-id>
+            <!-- Tivemos que forcar o redirecionamento, caso contrario o usuario tinha que clicar duas vezes para funcionar -->            
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editaPedido</from-outcome>
+            <to-view-id>/index.jsp?page=dadosPedido</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listaProdutos</from-outcome>
+            <to-view-id>/index.jsp?page=listaProdutos</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>pedidoEnviado</from-outcome>
+            <to-view-id>/index.jsp?page=pedidoEnviado</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>buscarGraficoVendas</from-outcome>
+            <to-view-id>/index.jsp?page=buscaGraficoVendas</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>buscarRelatorioVendas</from-outcome>
+            <to-view-id>/index.jsp?page=buscaRelatorioVendas</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <to-view-id>/index.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+    <converter>
+        <converter-id>br.com.globalcode.converter.Categoria</converter-id>
+        <converter-class>br.com.globalcode.converters.ConversorCategoria</converter-class>
+    </converter>
+    <converter>
+        <converter-id>br.com.globalcode.converter.Banco</converter-id>
+        <converter-class>br.com.globalcode.converters.ConversorBanco</converter-class>
+    </converter>
+    <converter>
+        <converter-id>br.com.globalcode.converter.Bandeira</converter-id>
+        <converter-class>br.com.globalcode.converters.ConversorBandeira</converter-class>
+    </converter>
+    <converter>
+        <converter-id>br.com.globalcode.converter.Banco</converter-id>
+        <converter-class>br.com.globalcode.converters.ConversorBanco</converter-class>
+    </converter>
+    <converter>
+        <converter-id>br.com.globalcode.converter.Bandeira</converter-id>
+        <converter-class>br.com.globalcode.converters.ConversorBandeira</converter-class>
+    </converter>
+    
+    <component>
+        <display-name>Calendario</display-name>
+        <component-type>br.com.globalcode.components.UICalendario</component-type>
+        <component-class>br.com.globalcode.components.UICalendario</component-class>
+    </component>
+    
+    
+    <application>
+        <locale-config>
+            <default-locale>pt_br</default-locale>
+            <supported-locale>us</supported-locale>
+        </locale-config>
+        <message-bundle>br.com.globalcode.mensagens</message-bundle>
+    </application>
+    
+</faces-config>
